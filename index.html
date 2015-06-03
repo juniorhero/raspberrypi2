@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Raspberry Pi 2 - GPIO, UART TX and RX Web Controller Without Using SSH Access by juniorhero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Raspberry Pi 2 - GPIO, UART TX and RX Web Controller Without Using SSH Access</h1>
+      <h2 class="project-tagline">Raspberry Pi 2 Web Controller Without Need of SSH Access</h2>
+      <a href="https://github.com/juniorhero/raspberrypi2" class="btn">View on GitHub</a>
+      <a href="https://github.com/juniorhero/raspberrypi2/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/juniorhero/raspberrypi2/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>Welcome to the page, here you can get the source code to control all the 15 GPIO Pins and  UART TX and UART RX pin of Raspberry Pi version 2. </p>
+
+<p>Unlike other projects, you don't need to SSH login to Raspberry PI to control your PI GPIO pins.</p>
+
+<p>Remember to get this project working, do the following </p>
+
+<h6>
+<a id="step1" class="anchor" href="#step1" aria-hidden="true"><span class="octicon octicon-link"></span></a>############################STEP1</h6>
+
+<p>Login to your Pi terminal</p>
+
+<h6>
+<a id="step2" class="anchor" href="#step2" aria-hidden="true"><span class="octicon octicon-link"></span></a>################STEP2</h6>
+
+<h1>
+<a id="2-install-wiringpi-v224-or-above-remember-wiringpi-for-raspberry-pi-v2-need-to-be-installed-from-httpsgitdrogonnetpwiringpiasummary" class="anchor" href="#2-install-wiringpi-v224-or-above-remember-wiringpi-for-raspberry-pi-v2-need-to-be-installed-from-httpsgitdrogonnetpwiringpiasummary" aria-hidden="true"><span class="octicon octicon-link"></span></a>2 Install wiringPi v2.24 or above. Remember wiringPi for Raspberry Pi V2 need to be installed from <a href="https://git.drogon.net/?p=wiringPi;a=summary">https://git.drogon.net/?p=wiringPi;a=summary</a>
+</h1>
+
+<p>Click on commit of the "master" package, then click on "snapshot" of first package</p>
+
+<p>git clone git://git.drogon.net/wiringPi
+cd wiringPi
+git pull origin
+cd wiringPi  ./build</p>
+
+<p>Now test wiringPi installation with
+cd wiringPi
+./build</p>
+
+<h6>
+<a id="step3" class="anchor" href="#step3" aria-hidden="true"><span class="octicon octicon-link"></span></a>################STEP3</h6>
+
+<p>Follow the terminal commands below to install apache server and php compiler on raspberry pi
+sudo apt-get update
+sudo apt-get install apache2 apache2-doc apache2-utils
+sudo apt-get install libapache2-mod-php5 php5 php-pear php5-xcache</p>
+
+<p>after installing
+cd /var/www/
+sudo nano switch.php</p>
+
+<p>Now copy paste the code of this project named switch.php</p>
+
+<p>you can access your raspberrypi server with your hostname which is "raspberrypi" by default or your raspberrypi ip address.
+Find it by terminal command, ifconfig</p>
+
+<h6>
+<a id="step4" class="anchor" href="#step4" aria-hidden="true"><span class="octicon octicon-link"></span></a>#########STEP4</h6>
+
+<p>USAGE OF THIS PROJECT</p>
+
+<p>TO GET THE REST API WORKING ON YOUR BROWSER, SWITCH.PHP
+access http://raspberrypi/switch.php</p>
+
+<p>PASS GET Parameters to get GPIO ON, OFF</p>
+
+<p>http://raspberrypi/switch.php?pin=0&amp;switch=1</p>
+
+<p>where "pin" number represents the pin number of wiringPi starting from 0 to 16
+"switch" represents ON OFF state of the GPIO, for</p>
+
+<h6>
+<a id="" class="anchor" href="#" aria-hidden="true"><span class="octicon octicon-link"></span></a>############</h6>
+
+<p>OFF,   PIN=0
+ON,    PIN=1</p>
+
+<p>GPIO 18 ON
+http://raspberrypi/switch.php?pin=1&amp;switch=1</p>
+
+<p>GPIO 18 OFF
+http://raspberrypi/switch.php?pin=1&amp;switch=0</p>
+
+<h6>
+<a id="pin-numbers-of-all-gpio-and-rx-tx-uart" class="anchor" href="#pin-numbers-of-all-gpio-and-rx-tx-uart" aria-hidden="true"><span class="octicon octicon-link"></span></a>#####PIN NUMBERS OF ALL GPIO and RX TX UART</h6>
+
+<p>PORT Name                  pin number
+GPIO2                          8
+GPIO3                          9
+GPIO4                          7
+GPIO7                          11
+GPIO8                          10
+GPIO9                          13
+GPIO10                         12
+GPIO11                         14
+GPIO17                         0
+GPIO18                         1
+GPIO22                         3
+GPIO23                         4
+GPIO24                         5
+GPIO25                         6
+GPIO27                         2
+UART TX                        15 
+UART RX                        16</p>
+
+<h3>
+<a id="follow-the-pin-numbers-we-have-tested-all-pins-with-wiringpi" class="anchor" href="#follow-the-pin-numbers-we-have-tested-all-pins-with-wiringpi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Follow the pin numbers we have tested all pins with wiringPi</h3>
+
+<p>Feel Free to ask me any questions, bugs or problems you face. I will be extremely happy to assist you about this.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/juniorhero/raspberrypi2">Raspberry Pi 2 - GPIO, UART TX and RX Web Controller Without Using SSH Access</a> is maintained by <a href="https://github.com/juniorhero">juniorhero</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
