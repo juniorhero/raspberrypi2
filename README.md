@@ -37,7 +37,7 @@ sudo nano switch.php
 Now copy paste the code of this project named switch.php
 
 you can access your raspberrypi server with your hostname which is "raspberrypi" by default or your raspberrypi ip address. Find it by terminal command, ifconfig
-#############################STEP4
+#############################STEP4#####
 
 USAGE OF THIS PROJECT
 
@@ -48,6 +48,9 @@ PASS GET Parameters to get GPIO ON, OFF
 http://raspberrypi/switch.php?pin=0&switch=1
 
 where "pin" number represents the pin number of wiringPi starting from 0 to 16 "switch" represents ON OFF state of the GPIO, for
+
+
+
 
 ##############################
 
@@ -79,5 +82,26 @@ GPIO27 2
 UART TX 15                                                                                                      
 UART RX 16                                                                                                     
 Follow the pin numbers we have tested all pins with wiringPi                                                                                                                                                                                                          
+
+
+#############WEAVED INSTALATION#
+
+Install Weaved on Raspberry Pi on HTTP port 80 and control your Raspberry Pi from round the world.
+
+    wget https://github.com/weaved/installer/raw/master/binaries/weaved-nixinstaller_1.2.13.bin
+   
+    chmod +x weaved-nixinstaller_1.2.13.bin
+    
+    ./weaved-nixinstaller_1.2.13.bin
+    
+    Choose Web (http) on port 80 
+    
+    Enter the e-mail address and password for your Weaved account
+    
+    Enter an alias, or nickname for your device
+    
+    
+
+
 
 Feel Free to ask me any questions, bugs or problems you face. I will be extremely happy to assist you about this.                                                                                                     
