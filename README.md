@@ -2,6 +2,12 @@ Welcome to the page, here you can get the source code to control all the 15 GPIO
 
 Unlike other projects, you don't need to SSH login to Raspberry PI to control your PI GPIO pins.
 
+
+Download the android app from 
+https://play.google.com/store/apps/details?id=com.lightmypi
+
+
+
 Remember to get this project working, do the following
 
 ############################STEP1################
